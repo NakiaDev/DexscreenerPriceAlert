@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DexscreenerPriceAlert.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MagicContract" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0xb7e50106a5bd3cf21af210a755f9c8740890a8c9</Value>
+    </Setting>
+    <Setting Name="EthContract" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640</Value>
+    </Setting>
+    <Setting Name="Refresh" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="AlertTarget" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="AlertVolume" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="UpdateSettings" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
