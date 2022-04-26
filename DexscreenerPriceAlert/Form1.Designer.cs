@@ -47,6 +47,7 @@ namespace DexscreenerPriceAlert
             this.button1 = new System.Windows.Forms.Button();
             this.labelLastCheck = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.versionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAlert)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -196,7 +197,7 @@ namespace DexscreenerPriceAlert
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(21, 207);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(332, 98);
+            this.panel2.Size = new System.Drawing.Size(332, 89);
             this.panel2.TabIndex = 14;
             this.panel2.Visible = false;
             // 
@@ -230,11 +231,21 @@ namespace DexscreenerPriceAlert
             this.label8.TabIndex = 11;
             this.label8.Text = "Last checked";
             // 
+            // versionLabel
+            // 
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.Location = new System.Drawing.Point(3, 303);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(22, 13);
+            this.versionLabel.TabIndex = 15;
+            this.versionLabel.Text = "ver";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 318);
+            this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonStart);
@@ -247,6 +258,7 @@ namespace DexscreenerPriceAlert
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -270,6 +282,7 @@ namespace DexscreenerPriceAlert
         private System.Windows.Forms.Label labelLastCheck;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label versionLabel;
     }
 }
 

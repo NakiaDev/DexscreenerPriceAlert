@@ -1,4 +1,5 @@
-﻿using DexscreenerPriceAlert.Classes;
+﻿using AutoUpdaterDotNET;
+using DexscreenerPriceAlert.Classes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,12 +24,24 @@ namespace DexscreenerPriceAlert
         {
             InitializeComponent();
 
+            AutoUpdater.ShowSkipButton = false;
+            AutoUpdater.ShowRemindLaterButton = false;
+            SetAutoUpdateValuesAndStart();
+
             priceAlertTimer.Tick += PriceAlertTimer_Tick;
 
             client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        }        
+        }
+
+        private void SetAutoUpdateValuesAndStart()
+        {
+            AutoUpdater.InstallationPath = Application.StartupPath;
+            AutoUpdater.Start("http://updater.nhely.hu/DexscreenerPriceAlert/AutoUpdate.xml");
+
+            versionLabel.Text = "v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -172,7 +185,7 @@ namespace DexscreenerPriceAlert
 
         private void textBoxAlertTargert_TextChanged(object sender, EventArgs e)
         {
-            int.TryParse(textBoxAlertTargert.Text, out int result);
+            double.TryParse(textBoxAlertTargert.Text, out double result);
             Properties.Settings.Default.AlertTarget = result;
             Properties.Settings.Default.Save();
         }
