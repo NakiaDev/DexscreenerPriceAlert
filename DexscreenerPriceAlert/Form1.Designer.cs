@@ -29,6 +29,7 @@ namespace DexscreenerPriceAlert
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxMagicContract = new System.Windows.Forms.TextBox();
             this.textBoxEthContract = new System.Windows.Forms.TextBox();
@@ -249,6 +250,7 @@ namespace DexscreenerPriceAlert
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonStart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "DexscreenerPriceAlert";
             this.Load += new System.EventHandler(this.Form1_Load);
